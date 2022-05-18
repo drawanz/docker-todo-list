@@ -6,6 +6,8 @@ WORKDIR /todo-app/tests
 
 # RUN npm install
 
+ADD node_modules.tar.gz .
+
 COPY . .
 
 ENTRYPOINT [ "npm", "test" ]

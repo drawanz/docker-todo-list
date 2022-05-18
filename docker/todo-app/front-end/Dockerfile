@@ -6,6 +6,8 @@ WORKDIR /todo-app/front-end
 
 # RUN npm install
 
+ADD node_modules.tar.gz .
+
 COPY . .
 
 EXPOSE 3000
