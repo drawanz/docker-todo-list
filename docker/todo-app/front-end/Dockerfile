@@ -8,6 +8,6 @@ WORKDIR /todo-app/front-end
 
 COPY . .
 
-EXPOSE 3001
+EXPOSE 3000
 
 ENTRYPOINT [ "npm", "start" ]
