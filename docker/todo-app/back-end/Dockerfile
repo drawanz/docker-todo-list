@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14-alpine AS todobackend 
 
 WORKDIR /back-end
 
@@ -10,8 +10,8 @@ ADD node_modules.tar.gz .
 
 COPY . .
 
-RUN npm install
+# RUN npm install
 
 EXPOSE 3001
 
-CMD [ "npm", "start" ]
+ENTRYPOINT [ "npm", "start" ]

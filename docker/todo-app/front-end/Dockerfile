@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14-alpine AS todofrontend
 
 WORKDIR /front-end
 
@@ -10,8 +10,8 @@ ADD node_modules.tar.gz .
 
 COPY . .
 
-RUN npm install
+# RUN npm install
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+ENTRYPOINT [ "npm", "start" ]
