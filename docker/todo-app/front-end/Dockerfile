@@ -1,6 +1,6 @@
 FROM node:14-alpine
 
-WORKDIR /todo-app/front-end
+WORKDIR /front-end
 
 # COPY package*.-json .
 
@@ -9,6 +9,8 @@ WORKDIR /todo-app/front-end
 ADD node_modules.tar.gz .
 
 COPY . .
+
+RUN npm install
 
 EXPOSE 3000
 
